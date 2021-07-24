@@ -18,6 +18,13 @@ interface Props {
   setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
+interface IError {
+  age: string;
+  gender: string;
+  book: string;
+  colors: []
+}
+
 export function Form({setShowModal}: Props) {
   const dispatch = useDispatch();
   const step = useSelector<IState, number>(state => state.formSteps.step);

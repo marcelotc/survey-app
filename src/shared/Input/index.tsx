@@ -1,3 +1,4 @@
+import { ChangeEvent } from 'react';
 import { Container, InputField } from './styles';
 
 interface Props {
@@ -5,7 +6,7 @@ interface Props {
   type?: string;
   name?: string;
   id?: string;
-  onChange?: any;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
 }
 

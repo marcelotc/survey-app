@@ -10,7 +10,7 @@ import {
 interface FavoritesProps {
     surveyData: {
         book: string;
-        colors: any
+        colors: []
     };
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
     handleChangeMultiSelect: (value: string) => void;
