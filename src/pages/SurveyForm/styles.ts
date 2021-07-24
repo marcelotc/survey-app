@@ -38,6 +38,24 @@ export const ModalWrapper = styled.div<SurveyFormProps>`
     cursor: pointer;
     margin: 10px 10px 0  0;
   }
+
+  @media (max-width: 812px) {
+    flex-direction: column;
+    width: 550px;
+    height: unset;
+  }
+
+  @media (max-width: 812px) {
+    width: 450px;
+  }
+
+  @media (max-width: 476px) {
+    width: 350px;
+  }
+
+  @media (max-width: 365px) {
+    width: 250px;
+  }
 `;
 
 export const ModalHeader = styled.div<SurveyFormProps>`
@@ -57,6 +75,10 @@ export const ModalContent = styled.div<SurveyFormProps>`
   p {
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 812px) {
+    width: 100%;
+  }
 `;
 
 export const ModalImgOne = styled.img`
@@ -64,6 +86,10 @@ export const ModalImgOne = styled.img`
   height: 100%;
   border-radius: 10px 0 0 10px;
   background: #000;
+
+  @media (max-width: 812px) {
+    display: none;
+  }
 `;
 
 export const ModalImgTwo = styled.img`

@@ -8,6 +8,11 @@ interface SurveyFormProps {
 
 export const Container = styled.div<SurveyFormProps>`
     width: ${(props) => props.step === 4 ? '' : '64%'};
+
+    @media (max-width: 812px) {
+      overflow: scroll;
+      height: 295px;
+    }
 `;
 
 export const Label = styled.label`
@@ -46,6 +51,12 @@ export const ButtonContainer = styled.div`
         font-family: 'FontsFreeNetSFProTextLight';
       }
     }
+
+    @media (max-width: 580px) {
+      justify-content: space-between;
+      flex-direction: column-reverse;
+      align-items: center;
+  }
 `;  
 
 export const TableWrapper = styled.div`
@@ -58,7 +69,7 @@ export const TableWrapper = styled.div`
       margin: 20px auto;
     }
     
-    @media(min-width: 568px){
+    @media(min-width: 812px){
       padding: 0 30px;
     }
 `;
@@ -95,7 +106,7 @@ export const Table = styled.table`
       overflow-y: scroll;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 813px) {
       tbody,
       tr,
       td {
@@ -120,7 +131,7 @@ export const Table = styled.table`
       }
     }
 
-    @media (max-width: 568px){
+    @media (max-width: 812px){
       td:before {
         position: relative;
         text-align: left;
