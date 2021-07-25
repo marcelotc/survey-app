@@ -6,12 +6,19 @@ import App from './Main';
 import { Provider } from 'react-redux';
 import store from './store/';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-      <GlobalStyle />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+window.addEventListener("DOMContentLoaded", () => {
+  const root = document.createElement("div");
+  root.id = "root";
+
+  document.body.appendChild(root);
+
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+        <GlobalStyle />
+      </Provider>
+    </React.StrictMode>,
+    root
+  );
+});
