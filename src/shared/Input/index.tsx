@@ -13,7 +13,7 @@ interface Props {
 export const Input = ({ id, value, name, placeholder, onChange, ...rest}: Props) => {
   return (
     <Container>
-      <InputField name={name} value={value} placeholder={placeholder} onChange={onChange} {...rest} />
+      <InputField data-testid="book-input" name={name} value={value} placeholder={placeholder} onChange={onChange} {...rest} />
     </Container>
   );
 };

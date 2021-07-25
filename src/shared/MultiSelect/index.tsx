@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, MouseEventHandler } from 'react';
 import { Container } from './styles';
 import { Select as SelecteAntd, Tag  } from 'antd';
 
@@ -20,12 +20,13 @@ export const MultiSelect = ({ ...rest }) => {
 
   function tagRender(props: any) {
     const { label, value, closable, onClose } = props;
-    const onPreventMouseDown = (event: ChangeEvent<HTMLInputElement>) => {
+    const onPreventMouseDown = (event: ChangeEvent<any>) => {
       event.preventDefault();
       event.stopPropagation();
     };
     return (
       <Tag
+        data-testid="multiSelect-color"
         color={value}
         onMouseDown={onPreventMouseDown}
         closable={closable}

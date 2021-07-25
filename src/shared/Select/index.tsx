@@ -1,5 +1,5 @@
 import { Container } from './styles';
-import { Select as SelecteAntd, SelectProps } from 'antd';
+import { Select as SelecteAntd } from 'antd';
 
 
 export const Select = ({...rest }) => {
@@ -11,9 +11,9 @@ export const Select = ({...rest }) => {
           bordered={false}
           {...rest}
         >
-          <Option value="Youth">under 24</Option>
-          <Option value="Adult">25 - 64</Option>
-          <Option value="Senior">64+</Option>
+          <Option label="1" value="Youth">under 24</Option>
+          <Option label="2" value="Adult">25 - 64</Option>
+          <Option label="3" value="Senior">64+</Option>
         </SelecteAntd>
     </Container>
   );

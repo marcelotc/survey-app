@@ -6,6 +6,7 @@ import {
     StepContainer, 
     ErrorMessage
 } from '../styles';
+import { useState } from 'react';
 
 interface DetailsProps {
     surveyData: {
@@ -16,24 +17,26 @@ interface DetailsProps {
     handleChangeRadio: (e: ChangeEvent<HTMLInputElement>) => void;
     formErrors: any;
 }
-export function Identity({ surveyData, handleChangeSelect, formErrors, handleChangeRadio}: DetailsProps)  {
+export function Identity({ surveyData, handleChangeSelect, formErrors, handleChangeRadio}: DetailsProps)  {    
     return (
         <StepContainer>
             <div>
                 <Label>Age</Label>
                 <Select 
+                    data-testid="age-select"
                     id="age"
                     value={surveyData.age}
                     defaultValue={surveyData.age}
                     onChange={handleChangeSelect}
                 />
                 {formErrors.age && (
-                    <ErrorMessage>{formErrors.age}</ErrorMessage>
+                    <ErrorMessage data-testid="feedback-error">{formErrors.age}</ErrorMessage>
                 )}
             </div>
             <div>
                 <Label>Gender</Label>
                 <Radio 
+                    data-testid="gender-radio"
                     name="gender"
                     value={surveyData.gender}
                     defaultValue={surveyData.gender}

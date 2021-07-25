@@ -35,6 +35,7 @@ export function Favorites({ handleChange, handleChangeMultiSelect, formErrors, s
             <div>
                 <Label>Favorite Colors</Label>
                 <MultiSelect
+                   data-testid="colors-multiSelect"
                    value={surveyData.colors}
                    onChange={handleChangeMultiSelect}
                 />

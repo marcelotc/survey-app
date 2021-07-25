@@ -50,19 +50,19 @@ export function Summary({surveyData, setSurveyData, setShowModal}:Props) {
                     <tr className="columns">
                       <td data-label="Name">{surveyData.name}</td>
                       <td data-label="Email">{surveyData.email}</td>
-                      <td data-label="Age">{surveyData.age}</td>
-                      <td data-label="Gender">{surveyData.gender}</td>
-                      <td data-label="Favorite book">{surveyData.book}</td>
-                      <td data-label="Favorite Colors">
+                      <td data-testid="age" data-label="Age">{surveyData.age}</td>
+                      <td data-testid="gender" data-label="Gender">{surveyData.gender}</td>
+                      <td data-testid="book" data-label="Favorite book">{surveyData.book}</td>
+                      <td data-testid="colors" data-label="Favorite Colors">
                       {surveyData.colors.map((color: string) => (
-                          <p style={{ color: color}}>{color}</p>
+                          <p key={color} style={{ color: color}}>{color}</p>
                       ))}
                       </td>
                     </tr>
                 </tbody>
               </>
             </Table>
-            <Button onClick={info}>SUBMIT</Button>
+            <Button data-testid="submitForm" onClick={info}>SUBMIT</Button>
         </TableWrapper>
     )
 }

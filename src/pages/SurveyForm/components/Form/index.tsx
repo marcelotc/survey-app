@@ -54,8 +54,6 @@ export function Form({setShowModal}: Props) {
     }
   }, [])
 
-  console.log('storagedSurveyData', storagedSurveyData);
-
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setSurveyData({
       ...surveyData,
@@ -107,19 +105,19 @@ export function Form({setShowModal}: Props) {
     let errors: any = {};
 
     if (step === 2 && !formData.age) {
-      errors.age = "Cannot be blank";
+      errors.age = "Age cannot be blank";
     } 
     
     if (step === 2 && !formData.gender) {
-      errors.gender = "Cannot be blank";
+      errors.gender = "Gender cannot be blank";
     } 
 
     if ((step === 3 && !formData.book)) {
-      errors.book = "Cannot be blank";
+      errors.book = "Book cannot be blank";
     } 
 
     if ((step === 3 && formData.colors === "") || (step === 3 && formData.colors.length === 0)) {
-      errors.colors = "Cannot be blank";
+      errors.colors = "Colors cannot be blank";
     } 
 
     return errors;
@@ -130,12 +128,13 @@ export function Form({setShowModal}: Props) {
       (step === 3 && surveyData.book === '') || (step === 3 && surveyData.colors.length === 0)) {
       return (
         <ButtonContainer>
-          <ButtonAnt htmlType="submit">NEXT</ButtonAnt>
+          <ButtonAnt id="next-btn" data-testid="next-btn2" onClick={() => handleSubmit()}>NEXT</ButtonAnt>
         </ButtonContainer>
       )
     } else {
       return (
         <ButtonAnt
+          data-testid="next-btn"
           onClick={() => handleIncrementStep()}>
           NEXT
         </ButtonAnt>)
