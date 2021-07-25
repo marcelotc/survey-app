@@ -45,11 +45,6 @@ To build the project and be able to include in a HTML file do the following:
 ```bash
 $ yarn build
 ```
-## :white_check_mark: To run tests
-
-```bash
-$ yarn test
-```
 
 After that, the build will generate a main.(hash).css and main.(hash).js bundle:
   
@@ -59,6 +54,11 @@ Include it in your HTML file as the image shows bellow:
   
 ![](src/assets/buildHtml.png)
 
+## :white_check_mark: To run tests
+
+```bash
+$ yarn test
+```
 
 Made with ♥ by Marcelo T. Cortes :wave:
 
