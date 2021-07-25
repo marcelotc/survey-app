@@ -43,8 +43,12 @@ $ yarn start
 To build the project and be able to include in a HTML file do the following:
 
 ```bash
-# Build the project
 $ yarn build
+```
+## :white_check_mark: To run tests
+
+```bash
+$ yarn test
 ```
 
 After that, the build will generate a main.(hash).css and main.(hash).js bundle:
