@@ -49,9 +49,9 @@ export const SurveyForm = ({ showModal, setShowModal }: props) => {
 
   const renderStepTitle = () => {
     if(step === 1) {
-      return 'Details';
-    } else if(step === 2) {
       return 'Identity';
+    } else if(step === 2) {
+      return 'Details';
     } else {
       return 'Favorites';
     }
