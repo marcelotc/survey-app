@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback, SetStateAction, Dispatch} from 'react';
+import React, { useRef, useCallback, SetStateAction, Dispatch} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { 
   Background, 

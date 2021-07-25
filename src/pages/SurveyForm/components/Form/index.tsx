@@ -9,7 +9,6 @@ import { Identity } from './Identity';
 import { Details } from './Details';
 import { Favorites } from './Favorites';
 import { Summary } from './Summary';
-import { Button } from '../../../../shared/Button';
 import { incrementStep, decrementStep, setStep } from '../../../../store/modules/formSteps/actions';
 import { setFormData } from '../../../../store/modules/formData/actions';
 import { IState } from '../../../../store/index';

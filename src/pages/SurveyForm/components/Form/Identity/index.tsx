@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction } from 'react'
+import { ChangeEvent } from 'react'
 import { Select } from '../../../../../shared/Select';
 import { Radio } from '../../../../../shared/Radio';
 import { 
@@ -6,8 +6,6 @@ import {
     StepContainer, 
     ErrorMessage
 } from '../styles';
-import { useState } from 'react';
-
 interface DetailsProps {
     surveyData: {
         age: string;

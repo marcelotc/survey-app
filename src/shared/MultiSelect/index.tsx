@@ -1,4 +1,4 @@
-import { ChangeEvent, MouseEventHandler } from 'react';
+import { ChangeEvent } from 'react';
 import { Container } from './styles';
 import { Select as SelecteAntd, Tag  } from 'antd';
 
