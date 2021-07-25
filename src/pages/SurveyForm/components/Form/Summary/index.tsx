@@ -27,7 +27,7 @@ export function Summary({surveyData, setSurveyData, setShowModal}:Props) {
   }
 
   const info = () => {
-    message.info('Survey submited!');
+    message.info('Survey submitted!');
     handleSubmit();
     setTimeout(() => {setShowModal(false);},1000)
   };
