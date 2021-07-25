@@ -8,9 +8,11 @@
   First and foremost thank you yieldstreet for the oportunity, all the information about the project are explained down bellow.
 </h4>
 
-
-![](src/assets/surveyImg.png)
-
+<p align="center">
+  <a href="https://yeidlstreet-survey.netlify.app/">
+    <img alt="Demo on Netlify" src="src/assets/surveyImg.png">
+  </a>
+</p>
 
 <p align="center">
   <a href="https://yeidlstreet-survey.netlify.app/">
