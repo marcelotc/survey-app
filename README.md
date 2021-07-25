@@ -8,11 +8,13 @@
   First and foremost thank you yieldstreet for the oportunity, all the information about the project are explained down bellow.
 </h4>
 
+
 ![](src/assets/surveyImg.png)
 
+
 <p align="center">
-  <a href="https://bancointer-redesign.netlify.app" target="_blank">
-    <img alt="Demo on Netlify" src="https://yeidlstreet-survey.netlify.app/">
+  <a href="https://yeidlstreet-survey.netlify.app/">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
   </a>
 </p>
 
