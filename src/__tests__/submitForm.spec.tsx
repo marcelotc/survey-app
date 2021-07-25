@@ -6,8 +6,8 @@ import store from '../store';
 
 function setShowModal() {}
 
-describe('Checking when user click next button in step 3 with book and favorite color fields filled in, he goes to step 4', () => {
-  it('click next button', async () => {
+describe('Checking when user click submit button on summary, the "Survey submitted!" message appears, meaning that the survey has endend and submitted.', () => {
+  it('click submit button', async () => {
       const { container, getByTestId, debug } = render(
         <Provider store={store}>
           <Form setShowModal={setShowModal} />
@@ -88,7 +88,7 @@ describe('Checking when user click next button in step 3 with book and favorite 
         const submitButton = getByTestId('submitForm');
         fireEvent.click(submitButton);
 
-        expect(screen.getByText(`Survey submited!`)).toBeInTheDocument()
+        expect(screen.getByText(`Survey submitted!`)).toBeInTheDocument()
         debug();
     });
 });
