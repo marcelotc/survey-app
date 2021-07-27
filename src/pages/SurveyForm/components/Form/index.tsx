@@ -77,12 +77,18 @@ export function Form({setShowModal}: Props) {
       step: 3
     })
   }
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
   const handleIncrementStep = () => {
-    localStorage.setItem('@Yieldstreet:surveyData', JSON.stringify(surveyData));
-    dispatch(incrementStep());
-    dispatch(setFormData(surveyData));
-    setFormErrors(false);
+    if(formData.email === "" || emailRegex.test(formData.email)) {
+      localStorage.setItem('@Yieldstreet:surveyData', JSON.stringify(surveyData));
+      dispatch(incrementStep());
+      dispatch(setFormData(surveyData));
+      setFormErrors(false);
+    } else if (!emailRegex.test(formData.email)) {
+      setFormErrors(validate());
+    }
   };
 
   const handleDecrementStep = () => {
@@ -95,6 +101,10 @@ export function Form({setShowModal}: Props) {
 
   const validate = () => {
     let errors: any = {};
+    
+    if (!emailRegex.test(formData.email)) {
+      errors.email = "Ivalid email format";
+    }
 
     if (step === 2 && !formData.age) {
       errors.age = "Age cannot be blank";
@@ -120,7 +130,7 @@ export function Form({setShowModal}: Props) {
       (step === 3 && surveyData.book === '') || (step === 3 && surveyData.colors.length === 0)) {
       return (
         <ButtonContainer>
-          <ButtonAnt id="next-btn" data-testid="next-btn2" onClick={() => handleSubmit()}>NEXT</ButtonAnt>
+          <ButtonAnt id="next-btn" data-testid="next-btn2" htmlType="submit">NEXT</ButtonAnt>
         </ButtonContainer>
       )
     } else {
@@ -138,6 +148,7 @@ export function Form({setShowModal}: Props) {
           <FormAnt onFinish={handleSubmit}>
             {step === 1 ? (
               <Details 
+                formErrors={formErrors}
                 surveyData={surveyData}
                 handleChange={handleChange}
               />

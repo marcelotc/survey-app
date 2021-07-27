@@ -3,6 +3,7 @@ import { Input } from '../../../../../shared/Input';
 import { 
     Label, 
     StepContainer, 
+    ErrorMessage
 } from '../styles';
 
 interface DetailsProps {
@@ -11,9 +12,10 @@ interface DetailsProps {
         email: string;
     };
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    formErrors: any;
 }
 
-export function Details({ handleChange, surveyData }: DetailsProps) {
+export function Details({ handleChange, surveyData, formErrors }: DetailsProps) {
     return (
         <StepContainer>
             <div>
@@ -33,6 +35,9 @@ export function Details({ handleChange, surveyData }: DetailsProps) {
                     placeholder={surveyData.email}
                     value={surveyData.email}
                     onChange={handleChange} />
+                {formErrors.email && (
+                    <ErrorMessage>{formErrors.email}</ErrorMessage>
+                )}
             </div>
         </StepContainer>
     )
