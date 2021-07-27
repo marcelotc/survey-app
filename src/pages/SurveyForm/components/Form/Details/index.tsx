@@ -12,7 +12,7 @@ interface DetailsProps {
         email: string;
     };
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-    formErrors: any;
+    formErrors: { email: string }
 }
 
 export function Details({ handleChange, surveyData, formErrors }: DetailsProps) {

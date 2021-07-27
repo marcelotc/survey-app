@@ -14,7 +14,10 @@ interface FavoritesProps {
     };
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
     handleChangeMultiSelect: (value: string) => void;
-    formErrors: any;
+    formErrors: {
+        book: string;
+        colors: string;
+      }
 }
 
 export function Favorites({ handleChange, handleChangeMultiSelect, formErrors, surveyData }: FavoritesProps) {

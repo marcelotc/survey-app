@@ -13,7 +13,10 @@ interface DetailsProps {
     };
     handleChangeSelect: (value: string) => void;
     handleChangeRadio: (e: ChangeEvent<HTMLInputElement>) => void;
-    formErrors: any;
+    formErrors: {
+        age: string;
+        gender: string;
+      }
 }
 export function Identity({ surveyData, handleChangeSelect, formErrors, handleChangeRadio}: DetailsProps)  {    
     return (

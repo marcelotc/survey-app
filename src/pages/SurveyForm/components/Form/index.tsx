@@ -17,6 +17,14 @@ interface Props {
   setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
+interface ErrorsI {
+  email: string;
+  age: string;
+  gender: string;
+  book: string;
+  colors: string;
+}
+
 export function Form({setShowModal}: Props) {
   const dispatch = useDispatch();
   const step = useSelector<IState, number>(state => state.formSteps.step);
@@ -30,7 +38,13 @@ export function Form({setShowModal}: Props) {
         return formData;
       }
   });
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState<ErrorsI>({
+    email: "",
+    age: "",
+    gender: "",
+    book: "",
+    colors: "",
+  });
   
   localStorage.setItem('@Yieldstreet:surveyData', JSON.stringify(surveyData));
 
@@ -77,7 +91,7 @@ export function Form({setShowModal}: Props) {
       step: 3
     })
   }
-  
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
   const handleIncrementStep = () => {
@@ -85,7 +99,13 @@ export function Form({setShowModal}: Props) {
       localStorage.setItem('@Yieldstreet:surveyData', JSON.stringify(surveyData));
       dispatch(incrementStep());
       dispatch(setFormData(surveyData));
-      setFormErrors(false);
+      setFormErrors({
+        email: "",
+        age: "",
+        gender: "",
+        book: "",
+        colors: "",
+      });
     } else if (!emailRegex.test(formData.email)) {
       setFormErrors(validate());
     }
@@ -100,7 +120,13 @@ export function Form({setShowModal}: Props) {
   };
 
   const validate = () => {
-    let errors: any = {};
+    let errors: ErrorsI = {
+      email: "",
+      age: "",
+      gender: "",
+      book: "",
+      colors: "",
+    };
     
     if (!emailRegex.test(formData.email)) {
       errors.email = "Ivalid email format";
