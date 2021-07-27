@@ -8,7 +8,7 @@ function setShowModal() {}
 
 describe('Checking when user click submit button on summary, the "Survey submitted!" message appears, meaning that the survey has endend and submitted.', () => {
   it('click submit button', async () => {
-      const { container, getByTestId, debug } = render(
+      const { container, getByTestId } = render(
         <Provider store={store}>
           <Form setShowModal={setShowModal} />
         </Provider>
@@ -89,6 +89,5 @@ describe('Checking when user click submit button on summary, the "Survey submitt
         fireEvent.click(submitButton);
 
         expect(screen.getByText(`Survey submitted!`)).toBeInTheDocument()
-        debug();
     });
 });
