@@ -4,7 +4,7 @@ export const Container = styled.div`
   .ant-select{
     cursor: pointer;
     background-color: #f9f9f9;
-    color: #b2b2b5;
+    color: #000;
     border: 0;
     width: 100%;
     height: 40px;
@@ -21,6 +21,6 @@ export const Container = styled.div`
 
   .ant-select-selection-placeholder{
     font-family: 'FontsFreeNetSFProTextLight';
-    color: #b2b2b5;
+    color: #000;
   }
 `;

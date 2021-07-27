@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   .ant-select-selection-placeholder{
     font-family: 'FontsFreeNetSFProTextLight';
-    color: #b2b2b5;
+    color: #000;
   }
 
   .ant-select:not(.ant-select-disabled):hover .ant-select-selector {

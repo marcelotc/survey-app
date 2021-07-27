@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, ChangeEvent, Dispatch, SetStateAction } from 'react';
+import { useEffect, useState, ChangeEvent, Dispatch, SetStateAction } from 'react';
 import { Form as FormAnt, Button as ButtonAnt } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { 
@@ -15,13 +15,6 @@ import { IState } from '../../../../store/index';
 
 interface Props {
   setShowModal: Dispatch<SetStateAction<boolean>>;
-}
-
-interface IError {
-  age: string;
-  gender: string;
-  book: string;
-  colors: []
 }
 
 export function Form({setShowModal}: Props) {
@@ -51,7 +44,7 @@ export function Form({setShowModal}: Props) {
     } else {
       dispatch(setStep(3));
     }
-  }, [])
+  }, [dispatch, surveyData.step])
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setSurveyData({
@@ -85,16 +78,16 @@ export function Form({setShowModal}: Props) {
     })
   }
 
-  const handleIncrementStep = useCallback(() => {
+  const handleIncrementStep = () => {
     localStorage.setItem('@Yieldstreet:surveyData', JSON.stringify(surveyData));
     dispatch(incrementStep());
     dispatch(setFormData(surveyData));
     setFormErrors(false);
-  }, []);
+  };
 
-  const handleDecrementStep = useCallback(() => {
+  const handleDecrementStep = () => {
     dispatch(decrementStep());
-  }, []);
+  };
 
   const handleSubmit = () => {
     setFormErrors(validate());

@@ -18,6 +18,7 @@ export const Container = styled.div<SurveyFormProps>`
 export const Label = styled.label`
     font-family: 'FontsFreeNetSFProTextLight';
     font-size: 1rem;
+    color: #000;
 `; 
 
 export const StepContainer = styled.div<SurveyFormProps>`

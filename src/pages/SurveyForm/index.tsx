@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, SetStateAction, Dispatch} from 'react';
+import React, { useRef, SetStateAction, Dispatch} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { 
   Background, 
@@ -37,9 +37,9 @@ export const SurveyForm = ({ showModal, setShowModal }: props) => {
     transform: showModal ? `translateY(0%)` : `translateY(-100%)`
   });
 
-  const handleDecrementStep = useCallback(() => {
+  const handleDecrementStep = () => {
     dispatch(decrementStep());
-  }, []);
+  };
 
   const closeModal = (e: React.MouseEvent<HTMLInputElement>) => {
     if (modalRef.current === e.target) {

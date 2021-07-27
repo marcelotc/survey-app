@@ -28,9 +28,9 @@ export const InputField = styled(Input)`
   font-size: 1rem;
   width: 100%;
   background-color: #f9f9f9;
-  color: #b2b2b5;
+  color: #000;
 
   &::placeholder{
-    color: #b2b2b5;
+    color: #000;
   }
 `;
