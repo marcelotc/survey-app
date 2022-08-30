@@ -1,12 +1,6 @@
 <h1 align="center">
-    <img src="https://www.finder.com/niche-builder/5fd109c4495ce.png" />
-    <br>
-    Yieldstreet front-end challenge
+    Survey app
 </h1>
-
-<h4 align="center">
-  First and foremost thank you yieldstreet for the oportunity, all the information about the project are explained down bellow.
-</h4>
 
 <p align="center">
   <a href="https://yeidlstreet-survey.netlify.app/">
