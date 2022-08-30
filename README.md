@@ -36,10 +36,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/marcelotc/yieldstreet-survey.git
+$ git clone https://github.com/marcelotc/survey-app.git
 
 # Go into the repository
-$ cd yieldstreet
+$ cd survey-app
 
 # Install dependencies
 $ yarn install
