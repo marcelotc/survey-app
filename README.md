@@ -14,6 +14,12 @@
   </a>
 </p>
 
+## Features
+- Allow users to save data on local storage
+- When closing the survey the user get's to the step where they were
+- After submitting, the survey will not be opned unless the local storage is cleared
+
+
 ## :rocket: Technologies
 
 - [ReactJS](https://reactjs.org/)
